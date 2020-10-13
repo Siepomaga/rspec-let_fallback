@@ -2,7 +2,7 @@ require_relative "lib/rspec/let_fallback/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "rspec-let-fallback"
-  spec.version       = Rspec::LetFallback::VERSION
+  spec.version       = RSpec::LetFallback::VERSION
   spec.authors       = ["whitemerry"]
   spec.email         = ["whitemerry@outlook.com"]
 

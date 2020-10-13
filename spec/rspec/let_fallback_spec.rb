@@ -1,9 +1,7 @@
-RSpec.describe Rspec::Let::Fallback do
-  it "has a version number" do
-    expect(Rspec::Let::Fallback::VERSION).not_to be nil
-  end
+RSpec.describe RSpec::LetFallback do
+  describe "::VERSION" do
+    subject { described_class::VERSION }
 
-  it "does something useful" do
-    expect(false).to eq(true)
+    it { is_expected.to match(/^(?:[0-9]+\.){2}[0-9]+$/) }
   end
 end

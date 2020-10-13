@@ -1,6 +1,7 @@
-require "rspec/let/fallback/version"
+require "rspec/let_fallback/version"
+require "rspec/let_fallback/methods"
 
-module Rspec
+module RSpec
   module LetFallback
     class Error < StandardError; end
     # Your code goes here...
