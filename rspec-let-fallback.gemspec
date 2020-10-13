@@ -20,8 +20,11 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "https://github.com/whitemerry/rspec-let-fallback/releases"
 
   # Dependencies
+  spec.add_dependency "rspec-core", "~> 3.0"
 
   # Dev Dependencies
+  spec.add_development_dependency "appraisal"
+  spec.add_development_dependency "rspec"
   spec.add_development_dependency "rubocop-airbnb"
   spec.add_development_dependency "rubocop-rspec"
 
