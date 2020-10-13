@@ -1,8 +1,10 @@
 # RSpec::LetFallback
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rspec/let_fallback`. To experiment with that code, run `bin/console` for an interactive prompt.
+RSpec extension gem that allows to read let with fallback (if not defined yet in example group).
 
-TODO: Delete this and the text above, and describe your gem
+[![Gem Version](https://badge.fury.io/rb/rspec-let-fallback.svg)](https://badge.fury.io/rb/rspec-let-fallback)
+[![codecov](https://codecov.io/gh/invoicity/rspec-let-fallback/branch/master/graph/badge.svg)](https://codecov.io/gh/invoicity/rspec-let-fallback)
+[![ruby](https://github.com/invoicity/rspec-let-fallback/workflows/Ruby/badge.svg)](https://github.com/invoicity/rspec-let-fallback/actions)
 
 ## Installation
 
@@ -20,6 +22,14 @@ Or install it yourself as:
 
     $ gem install rspec-let-fallback
 
+After installation add the following configuration to `spec/spec_helper.rb`.
+```ruby
+RSpec.configure do |config|
+  config.include RSpec::LetFallback::Methods
+end
+```
+
+And You are ready to go!
 ## Usage
 
 TODO: Write usage instructions here
