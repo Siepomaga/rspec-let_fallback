@@ -27,4 +27,4 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Run tests agains multiple rspec-core versions
-        run: bundle exec appraisal rspec
+        run: bundle exec appraisal install && bundle exec appraisal rspec
