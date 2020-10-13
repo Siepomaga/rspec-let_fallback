@@ -1,0 +1,9 @@
+require:
+  - rubocop-airbnb
+  - rubocop-rspec
+
+Airbnb/ConstAssignedInWrongFile:
+  Enabled: false
+
+Airbnb/ClassOrModuleDeclaredInWrongFile:
+  Enabled: false

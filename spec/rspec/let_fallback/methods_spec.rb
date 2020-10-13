@@ -6,7 +6,7 @@ RSpec.describe RSpec::LetFallback::Methods do
       let(:some_object) do
         {
           first_field: let?(:defined_one, 1),
-          second_field: let?(:defined_two, "string")
+          second_field: let?(:defined_two, "string"),
         }
       end
 
