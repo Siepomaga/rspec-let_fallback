@@ -3,8 +3,8 @@ require_relative "lib/rspec/let_fallback/version"
 Gem::Specification.new do |spec|
   spec.name          = "rspec-let-fallback"
   spec.version       = RSpec::LetFallback::Version::STRING
-  spec.authors       = ["whitemerry"]
-  spec.email         = ["whitemerry@outlook.com"]
+  spec.authors       = %w[whitemerry krismichalski]
+  spec.email         = %w[whitemerry@outlook.com kristopher.michalski@gmail.com]
 
   spec.summary       = %q{RSpec let fallback - let?(:name, "fallback value")}
   spec.description   = "RSpec extension gem that allows to read let " \

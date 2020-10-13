@@ -17,6 +17,12 @@ RSpec.describe RSpec::LetFallback::Methods do
 
         it { is_expected.to eq({ first_field: 103, second_field: "string" }) }
       end
+
+      context "with defined_two" do
+        let(:defined_two) { true }
+
+        it { is_expected.to eq({ first_field: 1, second_field: true }) }
+      end
     end
 
     context "with variable" do

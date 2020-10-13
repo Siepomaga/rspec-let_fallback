@@ -32,23 +32,60 @@ end
 And You are ready to go!
 ## Usage
 
-TODO: Write usage instructions here
+Use the `let?` method to access variables, both, already defined, or their fallback values.
+
+`let?` accepts two parameters, first is the desired variable name, and second one is the fallback value.
+```ruby
+let(:some_object) do
+  {
+    first_field: let?(:defined_one, 1),
+    second_field: let?(:defined_two, "string"),
+  }
+end
+
+# Fallback values
+it { expect(some_object).to eq({ first_field: 1, second_field: "string" }) }
+
+# Overriding first field
+context "with defined_one" do
+  let(:defined_one) { 103 }
+
+  it { expect(some_object).to eq({ first_field: 103, second_field: "string" }) }
+end
+
+# Overriding second field
+context "with defined_two" do
+  let(:defined_two) { true }
+
+  it { expect(some_object).to eq({ first_field: 1, second_field: true }) }
+end
+```
+
+You can use `let?` inside `example group` elements, for example inside `let`, `let!` and `subject` blocks.
+As a single value or as values in hash as shown in example.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rake spec` to run the tests.
+You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+For Apprisal tests (against multiple `rspec-core` versions) run `bundle exec appraisal install` and then `bundle exec appraisal rake test`.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
+To release a new version, update the version number in `version.rb`, and then prepare pull request on github.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rspec-let-fallback. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rspec-let-fallback/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/invoicity/rspec-let-fallback. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rspec-let-fallback/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](https://github.com/invoicity/rspec-let-fallback/blob/master/LICENSE.txt).
 
 ## Code of Conduct
 
-Everyone interacting in the RSpec::LetFallback project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rspec-let-fallback/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the RSpec::LetFallback project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/invoicity/rspec-let-fallback/blob/master/CODE_OF_CONDUCT.md).
+
+## Contributors
+
+[whitemerry](https://github.com/whitemerry) and [krismichalski](https://github.com/krismichalski)
