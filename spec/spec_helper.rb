@@ -1,5 +1,7 @@
 require "bundler/setup"
 require "rspec/let_fallback"
+require "simplecov"
+require "codecov"
 
 RSpec.configure do |config|
   if config.respond_to?(:example_status_persistence_file_path=)
@@ -15,4 +17,9 @@ RSpec.configure do |config|
   end
 
   config.include RSpec::LetFallback::Methods
+end
+
+unless ENV["APPRAISAL_INITIALIZED"]
+  SimpleCov.start
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end

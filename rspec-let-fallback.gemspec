@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
 
   # Dev Dependencies
   spec.add_development_dependency "appraisal"
+  spec.add_development_dependency "codecov"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rubocop-airbnb"
   spec.add_development_dependency "rubocop-rspec"
