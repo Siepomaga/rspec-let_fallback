@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in rspec-let-fallback.gemspec
+# Specify your gem's dependencies in rspec-let_fallback.gemspec
 gemspec
 
 gem "rake", "~> 12.0"

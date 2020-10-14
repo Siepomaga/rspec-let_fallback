@@ -12,7 +12,7 @@
 
 # Idea IntelliJ
 .idea
-rspec-let-fallback.iml
+rspec-let_fallback.iml
 
 # Appraisal
 gemfiles/*.gemfile.lock

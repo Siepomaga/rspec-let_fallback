@@ -1,7 +1,7 @@
 require_relative "lib/rspec/let_fallback/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "rspec-let-fallback"
+  spec.name          = "rspec-let_fallback"
   spec.version       = RSpec::LetFallback::Version::STRING
   spec.authors       = %w[whitemerry krismichalski]
   spec.email         = %w[whitemerry@outlook.com kristopher.michalski@gmail.com]
@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{RSpec let fallback - let?(:name, "fallback value")}
   spec.description   = "RSpec extension gem that allows to read let " \
                        "with fallback (if not defined yet in example group)."
-  spec.homepage      = "https://github.com/whitemerry/rspec-let-fallback"
+  spec.homepage      = "https://github.com/siepomaga/rspec-let_fallback"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["changelog_uri"] = "https://github.com/whitemerry/rspec-let-fallback/releases"
+  spec.metadata["changelog_uri"] = "https://github.com/siepomaga/rspec-let_fallback/releases"
 
   # Dependencies
   spec.add_dependency "rspec-core", "~> 3.0"
